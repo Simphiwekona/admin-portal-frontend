@@ -4,14 +4,16 @@ import { Navbar } from 'react-bootstrap';
 import { ReaVayaLogo } from './assest/data.js';
 import Signup from './components/signup/Sign.js';
 import Users from './components/users/Users.js';
+import QuoteModel from './components/quotation/QuoteModel.js';
+import QuotaList from './components/quotation/QuoteList.js';
 
 function App() {
   return (
     <div className="App">
-      <Signup/>
+      <QuoteModel/>
 
       <div className='container'>
-        <Users />
+        <QuotaList />
       </div>
     </div>
   );
