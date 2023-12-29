@@ -24,14 +24,14 @@ function QuotaList() {
 
     const handleGenerateHtml = async (quoteId) => {
         try {
-          const response = await fetch(`http://localhost:8080/api/quotations/${quoteId}`);
-          const htmlContent = await response.text();
-          setGeneratedHtml(htmlContent);
+            const response = await fetch(`http://localhost:8080/api/quotations/${quoteId}`);
+            const htmlContent = await response.text();
+            setGeneratedHtml(htmlContent);
         } catch (error) {
-          console.error('Error generating HTML:', error);
+            console.error('Error generating HTML:', error);
         }
-      };
-      
+    };
+
 
     const deleteUser = (userId) => {
         fetch(`http://localhost:8080/api/v1/${userId}`, { // Use backticks (`) here
@@ -67,57 +67,32 @@ function QuotaList() {
             {loading ? (
                 <p>Loading...</p>
             ) : (
-                <table className='table'>
-                    <thead>
-                        <tr>
-                            <th scope='col'>#</th>
-                            <th scope='col'>Customer Name</th>
-                            <th scope='col'>Contact Number</th>
-                            <th scope='col'>Email</th>
-                            <th scope='col'>Description</th>
-                            <th scope='col'>Quote Number</th>
-                            <th scope='col'>Quote Date</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        {quotelist.map((quoteList) => (
-                            <tr key={quoteList.quoteId}>
-                                <td>{quoteList.quoteId}</td>
-                                <td>{quoteList.customer_name}</td>
-                                <td>{quoteList.contact_number}</td>
-                                <td>{quoteList.email}</td>
-                                <td>{quoteList.description}</td>
-                                <td>QU{quoteList.quotationNumber}</td>
-                                <td>{quoteList.quote_date}</td>
-                                {/* Other table data */}
-                                <td>
-                                    <Button
-                                        variant='success'
-                                        onClick={() => handleGenerateHtml(quoteList.quoteId)}
-                                    >
-                                        Generate
-                                    </Button>
-                                </td>
-                                <td>
-                                    <Button variant='primary'>
-                                        View
-                                    </Button>
-                                </td>
-                            </tr>
-                        ))}
-                    </tbody>
-                    {generatedHtml && (
-                        <div>
-                            <h2>Generated HTML:</h2>
-                            <div dangerouslySetInnerHTML={{ __html: generatedHtml }} />
+                <div className="row mt-4">
+                    {quotelist.map((quoteList) => (
+                        <div className="col-6 mb-3" key={quoteList.quoteId}>
+                            <div className="card" style={{ width: '34rem' }}>
+                                <div className="card-body">
+                                    <h5 className="card-title">{quoteList.customer_name}</h5>
+                                    <h6 className="card-subtitle mb-2 text-body-secondary">Quotation Number: QU{quoteList.quotationNumber}</h6>
+                                    <p className="card-text">{quoteList.description}</p>
+                                    <a href="#" className="card-link" onClick={() => handleGenerateHtml(quoteList.quoteId)}>Generate</a>
+                                    <a href="#" className="card-link">View Details</a>
+                                </div>
+                            </div>
                         </div>
-                    )}
-                </table>
-
-            )
-            }
+                    ))}
+                </div>
+            )}
+    
+            {generatedHtml && (
+                <div>
+                    <h2>Generated HTML:</h2>
+                    <div dangerouslySetInnerHTML={{ __html: generatedHtml }} />
+                </div>
+            )}
         </div>
-    )
+    );
+    
 
 }
 export default QuotaList;
