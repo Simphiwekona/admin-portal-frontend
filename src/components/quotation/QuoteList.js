@@ -22,15 +22,36 @@ function QuotaList() {
             });
     };
 
-    const handleGenerateHtml = async (quoteId) => {
+    const handleGeneratePdf = async (quoteId) => {
         try {
-            const response = await fetch(`http://localhost:8080/api/quotations/${quoteId}`);
-            const htmlContent = await response.text();
-            setGeneratedHtml(htmlContent);
+          // Make an AJAX request to the Spring Boot endpoint
+          const response = await fetch(`http://localhost:8080/template/${quoteId}`, {
+            method: 'GET',
+            headers: {
+              'Content-Type': 'application/json',
+            },
+          });
+    
+          // Check if the request was successful
+          if (response.ok) {
+            // Convert the response to a Blob (PDF) and create a download link
+            const blob = await response.blob();
+            const url = window.URL.createObjectURL(blob);
+            const a = document.createElement('a');
+            a.href = url;
+            a.download = 'quote.pdf';
+            document.body.appendChild(a);
+            a.click();
+            document.body.removeChild(a);
+            window.URL.revokeObjectURL(url);
+          } else {
+            // Handle error response
+            console.error('Failed to generate PDF');
+          }
         } catch (error) {
-            console.error('Error generating HTML:', error);
+          console.error('Error during PDF generation:', error);
         }
-    };
+      };
 
 
     const deleteUser = (userId) => {
@@ -75,8 +96,11 @@ function QuotaList() {
                                     <h5 className="card-title">{quoteList.customer_name}</h5>
                                     <h6 className="card-subtitle mb-2 text-body-secondary">Quotation Number: QU{quoteList.quotationNumber}</h6>
                                     <p className="card-text">{quoteList.description}</p>
-                                    <a href="#" className="card-link" onClick={() => handleGenerateHtml(quoteList.quoteId)}>Generate</a>
+                                    <button  className="card-link btn btn-primary" onClick={() => handleGeneratePdf(quoteList.quoteId)}>Generate</button>
                                     <a href="#" className="card-link">View Details</a>
+                                </div>
+                                <div className='card-footer'>
+                                    <p className='card-text'>{quotelist.quote_date}</p>
                                 </div>
                             </div>
                         </div>

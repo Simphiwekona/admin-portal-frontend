@@ -10,6 +10,10 @@ const Quotes = () => {
                 <div class="container-fluid d-flex justify-content-end">
                     <QuoteModel />
                 </div>
+                <div className='col text-center'>
+                    <h2 className='display-1'>Quotation</h2>
+                    <small>List of all the Quotaion</small>
+                </div>
             </nav>
             <div className='container'>
                 <QuotaList />
