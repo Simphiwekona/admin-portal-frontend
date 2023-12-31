@@ -78,17 +78,7 @@ const QuoteModel = () => {
                     <Form.Group className='mb-3' controlId='description'>
                         <Form.Label>Description</Form.Label>
                         <Form.Control as="textarea" placeholder='Enter Description' onChange={handleChange}  required/>
-                    </Form.Group>
-                    <Form.Group className='mb-3' controlId='unit'>
-                        <Form.Label>Unit</Form.Label>
-                        <Form.Control type='email' placeholder='Enter Unit Price' onChange={handleChange} required/>
-                    </Form.Group>
-                    <InputGroup className='mb-3'>
-                        <InputGroup.Text>R</InputGroup.Text>
-                        <Form.Control onChange={handleChange} />
-                        <InputGroup.Text>.00</InputGroup.Text>
-                    </InputGroup>
-                    
+                    </Form.Group> 
                 </Form>
             </Modal.Body>
             <Modal.Footer>

@@ -1,5 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import { Button } from 'react-bootstrap';
+import { Link, Route } from 'react-router-dom';
+import Details from '../../pages/Details';
+
 
 function QuotaList() {
 
@@ -97,7 +100,7 @@ function QuotaList() {
                                     <h6 className="card-subtitle mb-2 text-body-secondary">Quotation Number: QU{quoteList.quotationNumber}</h6>
                                     <p className="card-text">{quoteList.description}</p>
                                     <button  className="card-link btn btn-primary" onClick={() => handleGeneratePdf(quoteList.quoteId)}>Generate</button>
-                                    <a href="#" className="card-link">View Details</a>
+                                    <Link to="/details" className="card-link">View Details</Link>    
                                 </div>
                                 <div className='card-footer'>
                                     <p className='card-text'>{quotelist.quote_date}</p>

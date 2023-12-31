@@ -10,6 +10,7 @@ import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import Quotes from './pages/Quotes.jsx';
 import Invoice from './pages/Invoice.jsx';
 import Product from './pages/Product.jsx';
+import Details from './pages/Details.jsx';
 
 function App() {
   return (
@@ -27,6 +28,7 @@ function App() {
             <Route path="/quote" element={<Quotes />} />
             <Route path="/invoice" element={<Invoice />} />
             <Route path="/products" element={<Product />} />
+            <Route path='/details' element={<Details />} />
           </Routes>
         </div>
       </Router>
