@@ -1,4 +1,5 @@
 import { Button, Card } from "react-bootstrap";
+import './Component.css'
 
 const Item = ({ item, onDelete }) => {
     return (

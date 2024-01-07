@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import AddItemModal from '../components/modals/AddItemModal';
 import Item from '../components/Items';
 import Checkout from '../components/Checkout';
+import './../components/Component.css'
 
 const AddItem = () => {
     const [items, setItems] = useState([]);
@@ -27,7 +28,7 @@ const AddItem = () => {
                 <Item key={index} item={item} onDelete={() => removeItem(index)} />
             ))}
 
-            <Checkout items={items} />
+            <Checkout items={items}  />
         </div>
     );
 };
