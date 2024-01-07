@@ -73,7 +73,7 @@ const QuoteModel = () => {
                     <Form.Group className='mb-3' controlId='email'>
                         <Form.Label>Email</Form.Label>
                         <Form.Control type='email' placeholder='Enter Email' onChange={handleChange} required/>
-                    </Form.Group>
+                    </Form.Group> 
                 </Form>
             </Modal.Body>
             <Modal.Footer>

@@ -4,7 +4,7 @@ import { BrowserRouter as Router, Route, Routes, Link } from 'react-router-dom';
 import Quotes from './pages/Quotes.jsx';
 import Invoice from './pages/Invoice.jsx';
 import Product from './pages/Product.jsx';
-import AddItem from './pages/AddItems.jsx'
+import AddItem from './pages/AddItems.jsx';
 import { useState } from 'react';
 
 const App = () => {
@@ -14,7 +14,7 @@ const App = () => {
   const toggleSideNav = () => {
     setSideVisible(!sideVisible);
   };
-
+  
   return (
     <div className="App">
       <Router>
