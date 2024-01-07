@@ -1,32 +1,37 @@
 import './App.css';
-import Login from './components/login/Login';
-import { Navbar } from 'react-bootstrap';
-import { ReaVayaLogo } from './assest/data.js';
-import Signup from './components/signup/Sign.js';
-import Users from './components/users/Users.js';
-import QuoteModel from './components/quotation/QuoteModel.js';
-import QuotaList from './components/quotation/QuoteList.js';
-import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import { Button, Navbar } from 'react-bootstrap';
+import { BrowserRouter as Router, Route, Routes, Link } from 'react-router-dom';
 import Quotes from './pages/Quotes.jsx';
 import Invoice from './pages/Invoice.jsx';
 import Product from './pages/Product.jsx';
+import AddItem from './pages/AddItems.jsx'
+import { useState } from 'react';
 
-function App() {
+const App = () => {
+
+  const [sideVisible, setSideVisible] = useState(true);
+
+  const toggleSideNav = () => {
+    setSideVisible(!sideVisible);
+  };
+
   return (
     <div className="App">
       <Router>
         <div>
-          <div className="side-nav">
-            <a href="/">Home</a>
-            <a href="/quote">Quote</a>
-            <a href="/invoice">Invoice</a>
-            <a href="/products">Products</a>
+          <button onClick={toggleSideNav}>Toggle Nav</button>
+          <div className={`side-nav ${sideVisible ? 'visible' : ''}`}>
+            <Link to="/">Home</Link>
+            <Link to="/quote">Quote</Link>
+            <Link to="/invoice">Invoice</Link>
+            <Link to="/products">Products</Link>
           </div>
           <Routes>
-            <Route path="/" exact component={<App />} />
+            <Route path="/" element={<div>Home Page</div>} />
             <Route path="/quote" element={<Quotes />} />
             <Route path="/invoice" element={<Invoice />} />
             <Route path="/products" element={<Product />} />
+            <Route path="/addItem" element={<AddItem />} />
           </Routes>
         </div>
       </Router>

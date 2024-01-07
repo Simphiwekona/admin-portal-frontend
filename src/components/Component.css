@@ -1,0 +1,12 @@
+/* card styles */
+.checkout-card {
+    position: fixed;
+    top: 10px;
+    right: 10px;
+    width: 20rem;
+  }
+/* card description */
+.card-description {
+    width: 40rem;
+    margin-bottom: 30px;
+}
