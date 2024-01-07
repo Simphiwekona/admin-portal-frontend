@@ -109,7 +109,7 @@ function QuotaList() {
                                     <h6 className="card-subtitle mb-2 text-body-secondary">Quotation Number: QU{quoteList.quotationNumber}</h6>
                                     <p className="card-text">{quoteList.description}</p>
                                     <button className="card-link btn btn-primary" onClick={() => handleGeneratePdf(quoteList.quoteId)}>Generate</button>
-                                    <Link to="/addItem">
+                                    <Link to={`/addItem/${quoteList.quoteId}`}>
                                         <Button variant='success'>Add Item</Button>
                                     </Link>
                                 </div>
