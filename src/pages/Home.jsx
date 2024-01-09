@@ -1,7 +1,8 @@
 import './styles/style.css';
 import { Link, animateScroll as scroll } from 'react-scroll';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faCoffee } from '@fortawesome/free-solid-svg-icons';
+import { faCoffee, faFaceb } from '@fortawesome/free-solid-svg-icons';
+import AboutImage from './../assest/aboutLogo.png'
 
 
 
@@ -39,7 +40,18 @@ const AboutUs = () => {
     return (
         <section className="about-us" id='about-us'>
             <div className="container">
-                <h1>About Us</h1>
+                <div className="row">
+                    <div className="col-md-8">
+                        <h2>About Us</h2>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                            Cumque exercitationem similique omnis praesentium adipisci nemo necessitatibus.
+                            Accusamus tenetur, cum temporibus architecto impedit aliquam ipsam commodi asperiores
+                            deserunt est eveniet. Reprehenderit?</p>
+                    </div>
+                    <div className="col-md-4">
+                        <img src={AboutImage} alt=""/>
+                    </div>
+                </div>
             </div>
         </section>
     )
@@ -55,7 +67,7 @@ const Products = () => {
     )
 }
 const Footer = () => {
-    return(
+    return (
         <section className="footer" id='footer'>
             <div className="container">
                 <div className="row">
@@ -80,10 +92,10 @@ const Footer = () => {
                     </div>
                     <div className="col-md text-md-center">
                         <ul className="social list-unstyled">
-                            <li><Link to=""><FontAwesomeIcon icon={faCoffee} style={{color:"#fff"}}/></Link></li>
-                            <li><Link to=""><FontAwesomeIcon icon={faCoffee} style={{color:"#fff"}}/></Link></li>
-                            <li><Link to=""><FontAwesomeIcon icon={faCoffee} style={{color:"#fff"}}/></Link></li>
-                            <li><Link to=""><FontAwesomeIcon icon={faCoffee} style={{color:"#fff"}}/></Link></li>
+                            <li><Link to=""><FontAwesomeIcon icon="fa-brands fa-facebook" /></Link></li>
+                            <li><Link to=""><FontAwesomeIcon icon={faCoffee} style={{ color: "#fff" }} /></Link></li>
+                            <li><Link to=""><FontAwesomeIcon icon={faCoffee} style={{ color: "#fff" }} /></Link></li>
+                            <li><Link to=""><FontAwesomeIcon icon={faCoffee} style={{ color: "#fff" }} /></Link></li>
                         </ul>
                     </div>
                 </div>

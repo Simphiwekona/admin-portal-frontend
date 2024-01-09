@@ -15,10 +15,36 @@
 }
 
 /* About Us Section */
+/* Add some styling to the container */
 .about-us {
-    background-color: lightgrey;
-    height: 500px;
+    background-color: #f9f9f9; /* Light background color */
+    padding: 80px 0; /* Adjust padding for better spacing */
 }
+
+/* Style the heading */
+.about-us h2 {
+    font-size: 40px;
+    font-weight: bold;
+    color: #333; /* Dark text color */
+    margin-bottom: 20px; /* Add some space below the heading */
+}
+
+/* Style the paragraph */
+.about-us p {
+    font-size: 18px; /* Slightly reduce font size for better readability */
+    line-height: 1.6; /* Increase line height for better spacing between lines */
+    color: #555; /* Slightly darker text color */
+}
+
+/* Style the image */
+.about-us img {
+    max-width: 100%; /* Ensure the image is responsive */
+    border-radius: 8px; /* Add a subtle border-radius for a modern look */
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1); /* Add a subtle box shadow for depth */
+    margin-top: 20px; /* Add some space above the image */
+}
+
+
 
 /* products section */
 .products {
