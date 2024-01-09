@@ -1,0 +1,27 @@
+/* Header Style */
+
+.header {
+    background-color: #000;
+    height: 500px;
+    overflow: hidden;
+    color: #fff;
+}
+.header-text {
+    padding-top: 160px;
+}
+.header-text h1{
+    font-size: 75px;
+    font-weight: bolder;
+}
+
+/* About Us Section */
+.about-us {
+    background-color: lightgrey;
+    height: 500px;
+}
+
+/* products section */
+.products {
+    background-color: lightblue;
+    height: 500px;
+}
