@@ -10,7 +10,9 @@ const AddItem = ({quoteId}) => {
     
 
     const addItem = async (item) => {
-        const response = await fetch(`http://localhost:8080/api/items/addItems`, {
+        console.log("quoteId: ", quoteId)
+
+        const response = await fetch(`http://localhost:8080/api/items/addItem/${quoteId}`, {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',

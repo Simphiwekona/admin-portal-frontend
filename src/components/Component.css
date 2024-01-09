@@ -1,12 +1,21 @@
 /* card styles */
 .checkout-card {
     position: fixed;
-    top: 10px;
-    right: 10px;
+    display: grid;
+    justify-content: end;
+    align-items: center;
+    top: 20px;
+    left: 90%;
+    right: 20px;
     width: 20rem;
   }
 /* card description */
 .card-description {
     width: 40rem;
     margin-bottom: 30px;
+}
+/* Modals styling  */
+.add-item-modal {
+  align-items: center;
+  justify-content: center;
 }
