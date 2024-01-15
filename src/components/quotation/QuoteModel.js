@@ -21,6 +21,8 @@ const QuoteModel = () => {
         e.preventDefault();
         const quote = e.currentTarget;
 
+        // console.log(quoteData);
+
         if (quote.checkValidity() === false) {
             e.stopPropagation();
         } else {
@@ -33,9 +35,10 @@ const QuoteModel = () => {
             })
                 .then((response) => response.json())
                 .then((data) => {
-                    alert('Successful Created Quote');
-                    console.log('success', data);
-                    navigate(`/addItem/${quoteData.quoteId}`)
+                    // alert('Successful Created Quote');
+                    // alert(data.quoteId);
+                    // console.log('success', data);
+                    navigate(`/addItem/${data.quoteId}`)
                     handleClose();
                     setValid(true)
                 })

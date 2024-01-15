@@ -18,7 +18,9 @@ function QuotaList() {
                 if (!response.ok) {
                     throw new Error('Network is down, Try again later');
                 }
+                console.log("data:  ", response )
                 return response.json();
+
             })
             .catch(error => {
                 console.error('Error fetching data: ', error);

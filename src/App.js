@@ -13,7 +13,7 @@ import SignUp from './pages/Signup.jsx';
 const App = () => {
 
  
-  
+  // Checkout items={items}
   return (
     <div className="App">
       <Router>
@@ -23,7 +23,7 @@ const App = () => {
             <Route path="/quote" element={<Quotes />} />
             <Route path="/invoice" element={<Invoice />} />
             <Route path="/products" element={<Product />} />
-            <Route path="/addItem/:quoteId" element={<AddItem />} />
+            <Route path="/addItem/:quoteId" element={<AddItem quoteId={1}/>} />
             <Route path='/login' element={<Login />} />
             <Route path='/analytics' element={<Analytics />} />
             <Route path='/signup' element={<SignUp />} />

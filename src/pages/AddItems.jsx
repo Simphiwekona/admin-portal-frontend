@@ -12,18 +12,33 @@ const AddItem = ({quoteId}) => {
     const addItem = async (item) => {
         console.log("quoteId: ", quoteId)
 
-        const response = await fetch(`http://localhost:8080/api/items/addItem/${quoteId}`, {
-            method: 'POST',
-            headers: {
-                'Content-Type': 'application/json',
-            },
-            body: JSON.stringify({ ...item, quoteId }),
-        });
+        // const response = await fetch(`http://localhost:8080/api/items/addItem/${quoteId}`, {
+        //     method: 'POST',
+        //     headers: {
+        //         'Content-Type': 'application/json',
+        //     },
+        //     body: JSON.stringify({ ...item, quoteId }),
+        // });
 
-        if (response.ok) {
-            const newItem = await response.json();
-            setItems([...items, newItem]);
-        }
+        // if (response.ok) {
+        //     const newItem = await response.json();
+        //     setItems([...items, newItem]);
+        // }
+        await fetch(`http://localhost:8080/api/items/addItem/${quoteId}`, {
+                method: 'POST',
+                headers: {
+                    'Content-type': 'application/json',
+                },
+                body: JSON.stringify({ ...item, quoteId }),
+        })
+        .then((response) => response.json())
+                .then((data) => {
+                    alert('Successful Added Item');  
+                })
+                .catch((error) => {
+                    console.log('Error', error);
+                    alert("Can't connect, Please try again!")
+                });
     };
 
     const removeItem = async (itemId) => {
