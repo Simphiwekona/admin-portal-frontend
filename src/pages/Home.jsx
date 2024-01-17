@@ -81,11 +81,7 @@ const Products = () => {
                                     sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.</p>
                                 <div className="row">
                                     <div className="col-xs-12 col-md-6">
-                                        <p className="lead">
-                                            $21.000</p>
-                                    </div>
-                                    <div className="col-xs-12 col-md-6">
-                                        <a className="btn btn-success" href="http://www.jquery2dotnet.com">Request Quotation</a>
+                                        <a className="custom-btn btn-5" >Request Quotation</a>
                                     </div>
                                 </div>
                             </div>
@@ -102,11 +98,7 @@ const Products = () => {
                                     sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.</p>
                                 <div className="row">
                                     <div className="col-xs-12 col-md-6">
-                                        <p className="lead">
-                                            $21.000</p>
-                                    </div>
-                                    <div className="col-xs-12 col-md-6">
-                                        <a className="btn btn-success" href="http://www.jquery2dotnet.com">Request Quotation</a>
+                                        <a className="custom-btn btn-5">Request Quotation</a>
                                     </div>
                                 </div>
                             </div>
@@ -123,11 +115,7 @@ const Products = () => {
                                     sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.</p>
                                 <div className="row">
                                     <div className="col-xs-12 col-md-6">
-                                        <p className="lead">
-                                            $21.000</p>
-                                    </div>
-                                    <div className="col-xs-12 col-md-6">
-                                        <a className="btn btn-success" href="http://www.jquery2dotnet.com">Request Quotation</a>
+                                        <a className="custom-btn btn-5">Request Quotation</a>
                                     </div>
                                 </div>
                             </div>
