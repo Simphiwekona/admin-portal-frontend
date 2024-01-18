@@ -4,6 +4,10 @@ import './styles/style.css';
 import './styles/footer.css';
 import './styles/products.css'
 
+import Latitude from './../assest/latitude.png';
+import Gaming from './../assest/gamingpc.png';
+import Macbook from './../assest/macbook.png';
+
 
 
 const Navbar = () => {
@@ -59,7 +63,7 @@ const AboutUs = () => {
 
 const Products = () => {
     return (
-        <section className="products" id='products'>
+        <section className="products mb-5" id='products'>
             <div className="container">
                 {/* <div className="well well-sm">
                     <strong>Display</strong>
@@ -70,9 +74,11 @@ const Products = () => {
                     </div>
                 </div> */}
                 <div className="row">
+
+
                     <div className="item  col-md-4">
                         <div className="thumbnail">
-                            <img className="group list-group-image" src="http://placehold.it/400x250/000/fff" alt="" />
+                            <img className="group list-group-image" src={Latitude} alt="" />
                             <div className="caption">
                                 <h4 className="group inner list-group-item-heading">
                                     Product title</h4>
@@ -87,9 +93,11 @@ const Products = () => {
                             </div>
                         </div>
                     </div>
+
+
                     <div className="item  col-md-4">
                         <div className="thumbnail">
-                            <img className="group list-group-image" src="http://placehold.it/400x250/000/fff" alt="" />
+                            <img className="group list-group-image" src={Gaming} alt="" />
                             <div className="caption">
                                 <h4 className="group inner list-group-item-heading">
                                     Product title</h4>
@@ -106,14 +114,14 @@ const Products = () => {
                     </div>
                     <div className="item  col-md-4">
                         <div className="thumbnail">
-                            <img className="group list-group-image" src="http://placehold.it/400x250/000/fff" alt="" />
+                            <img className="group list-group-image" src={Macbook} alt="" />
                             <div className="caption">
                                 <h4 className="group inner list-group-item-heading">
-                                    Product title</h4>
+                                    Apple Product</h4>
                                 <p className="group inner list-group-item-text">
                                     Product description... Lorem ipsum dolor sit amet, consectetuer adipiscing elit,
                                     sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.</p>
-                                <div className="row">
+                                <div className="row ">
                                     <div className="col-xs-12 col-md-6">
                                         <a className="custom-btn btn-5">Request Quotation</a>
                                     </div>

@@ -26,6 +26,10 @@
     margin-right: 10px;
 }
 
+.list-group-image {
+    width: 350px;
+}
+
 .item.list-group-item .thumbnail {
     margin-bottom: 0px;
 }
@@ -120,4 +124,10 @@
 .btn-5:hover:after {
     width: 100%;
     transition: 800ms ease all;
+}
+
+.thumbnail:hover {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transform: translateY(-2px);
+    transition: box-shadow 0.3s ease, transform 0.3s ease;
 }
