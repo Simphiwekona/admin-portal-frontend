@@ -7,6 +7,7 @@ import './styles/products.css'
 import Latitude from './../assest/latitude.png';
 import Gaming from './../assest/gamingpc.png';
 import Macbook from './../assest/macbook.png';
+import ChatModel from '../components/modals/ChatModel';
 
 
 
@@ -264,7 +265,7 @@ const Footer = () => {
                             <h6>Quick Links</h6>
                             <ul className="footer-links">
                                 <li><a href="http://scanfcode.com/about/">About Us</a></li>
-                                <li><a href="#">Contact Us</a></li>
+                                <li><ChatModel /></li>
                                 <li><a href="/login">Training</a></li>
                                 <li><a href="http://scanfcode.com/privacy-policy/">Privacy Policy</a></li>
                                 <li><a href="http://scanfcode.com/sitemap/">Terms and Service</a></li>

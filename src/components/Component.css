@@ -40,3 +40,14 @@
   background-color: #ddd;
   color: black;
 }
+
+.active-button {
+  text-decoration: underline;
+
+  &:hover {
+    color: red; /* Change color on hover */
+    text-decoration: none; /* Remove underline on hover */
+    cursor: pointer; /* Change cursor on hover */
+  }
+}
+
