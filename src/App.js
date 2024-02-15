@@ -8,6 +8,7 @@ import Home from './pages/Home.jsx';
 import Login from './pages/Login.jsx';
 import Analytics from './pages/Analytics.jsx';
 import SignUp from './pages/Signup.jsx';
+import Message from './pages/Message.jsx';
 
 
 const App = () => {
@@ -27,6 +28,8 @@ const App = () => {
             <Route path='/login' element={<Login />} />
             <Route path='/analytics' element={<Analytics />} />
             <Route path='/signup' element={<SignUp />} />
+            <Route path='/message' element={<Message />} />
+            
           </Routes>
         </div>
       </Router>
