@@ -3,6 +3,7 @@ import './styles/style.css';
 import './styles/login.css'
 import LinkedLogo from './../assest/LinkedLogo.png';
 import { Link, useNavigate } from "react-router-dom";
+import NotificationAlert from "../components/services/NotificationAlert";
 
 
 const Login = () => {
@@ -51,7 +52,7 @@ const Login = () => {
 						<span className="txt1">
 							Don’t have an account?
 						</span>
-
+						{/*<NotificationAlert message="Success" severity="success"/>*/}
 						<Link className="txt2" to='/signup'>
 							Sign Up
 						</Link>
