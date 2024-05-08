@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
-import './styles/style.css';
-import './styles/signup.css';
-import Alert from '@mui/material/Alert';
+// import './styles/style.css';
+// import './styles/signup.css';
+// import Alert from '@mui/material/Alert';
 import { useNavigate } from "react-router-dom";
 
 const SignUp = () => {
@@ -112,7 +112,7 @@ const SignUp = () => {
                     </div>
                 </form>
             </div>
-            {notification &&
+            {/* {notification &&
                 <Alert severity="success"
                        sx={{
                            position: 'absolute',
@@ -122,7 +122,7 @@ const SignUp = () => {
                     Successfully Registered!
                 </Alert>
 
-            }
+            } */}
         </div>
     );
 };
