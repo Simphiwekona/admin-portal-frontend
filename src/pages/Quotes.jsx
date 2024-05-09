@@ -3,12 +3,13 @@ import QuoteModel from '../components/quotation/QuoteModel';
 import QuotaList from '../components/quotation/QuoteList';
 import './styles/style.css'
 import Navbar from '../components/Navbar';
+import SideBar from '../components/navigation/Sidebar';
 
 const Quotes = () => {
     return (
         <>
-        <Navbar />
-            <nav class="navbar bg-body-tertiary">
+        <SideBar />
+            <nav class="navbar">
                 <div class="container-fluid d-flex justify-content-end">
                     <QuoteModel />
                 </div>

@@ -1,9 +1,16 @@
-import Navbar from './../components/Navbar.js';
+import SideBar from "../components/navigation/Sidebar";
+import './styles/analytics.css'
 
 const Analytics = () => {
-
     return (
-        <Navbar />
+        <>
+        <SideBar />
+
+        <div className="dashboard-container">
+
+        </div>
+        
+        </>
     )
 }
 export default Analytics;
