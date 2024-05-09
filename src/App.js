@@ -1,4 +1,6 @@
 import './App.css';
+
+import 'bootstrap/dist/css/bootstrap.min.css';
 import { BrowserRouter as Router, Route, Routes} from 'react-router-dom';
 import Quotes from './pages/Quotes.jsx';
 import Invoice from './pages/Invoice.jsx';
@@ -9,6 +11,8 @@ import Login from './pages/Login.jsx';
 import Analytics from './pages/Analytics.jsx';
 import SignUp from './pages/Signup.jsx';
 import Message from './pages/Message.jsx';
+import Dashboard from "./pages/dashboard";
+import Users from "./components/users/Users";
 
 
 const App = () => {
@@ -29,6 +33,8 @@ const App = () => {
             <Route path='/analytics' element={<Analytics />} />
             <Route path='/signup' element={<SignUp />} />
             <Route path='/message' element={<Message />} />
+            <Route path='/dashboard' element={<Dashboard />} />
+            <Route path='/users' element={<Users />} />
             
           </Routes>
         </div>

@@ -1,5 +1,6 @@
-import React, { useState, useEffect } from 'react';
-import { Button } from 'react-bootstrap';
+import React, {useState, useEffect} from 'react';
+import {Button} from 'react-bootstrap';
+import Navbar from "../Navbar";
 
 function Users() {
     const [users, setUsers] = useState([]);
@@ -23,17 +24,17 @@ function Users() {
         fetch(`http://localhost:8080/api/v1/${userId}`, { // Use backticks (`) here
             method: 'DELETE'
         })
-        .then(response => {
-            if (!response.ok) {
-                throw new Error('Failed to delete user');
-            }
-            fetchData();
-        })
-        .catch(error => {
-            console.error('Error deleting user: ', error);
-        });
+            .then(response => {
+                if (!response.ok) {
+                    throw new Error('Failed to delete user');
+                }
+                fetchData();
+            })
+            .catch(error => {
+                console.error('Error deleting user: ', error);
+            });
     };
-    
+
 
     useEffect(() => {
         const fetchDataAndHandleError = () => {
@@ -49,20 +50,22 @@ function Users() {
     }, []);
 
     return (
-        <div className='container mt-4'>
-            {loading ? (
-                <p>Loading...</p>
-            ) : (
-                <table className='table'>
-                    <thead>
+        <>
+            <Navbar />
+            <div className='container mt-lg-5'>
+                {loading ? (
+                    <p>Loading...</p>
+                ) : (
+                    <table className='table'>
+                        <thead>
                         <tr>
                             <th scope='col'>#</th>
                             <th scope='col'>First Name</th>
                             <th scope='col'>Last Name</th>
                             <th scope='col'>Email</th>
                         </tr>
-                    </thead>
-                    <tbody>
+                        </thead>
+                        <tbody>
                         {users.map((users) => (
                             <tr key={users.id}>
                                 <td>{users.id}</td>
@@ -81,12 +84,14 @@ function Users() {
                                 </td>
                             </tr>
                         ))}
-                    </tbody>
-                </table>
-            )
-            }
-        </div>
+                        </tbody>
+                    </table>
+                )
+                }
+            </div>
+        </>
     )
 
 }
+
 export default Users;

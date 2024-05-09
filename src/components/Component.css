@@ -51,3 +51,106 @@
   }
 }
 
+nav .notification-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+nav .notification-section .notifications {
+    text-decoration: none;
+    color: #000;
+    margin-right: 2.5rem;
+    text-decoration: none;
+    font-size: 1.2rem;
+    position: relative;
+}
+nav .notification-section .notifications::after {
+    content: attr(cart-items);
+    position: absolute;
+    top: -40%;
+    right: -75%;
+    font-size: 0.6rem;
+    color: #fff;
+    background: linear-gradient(to right, #b927fc 0%, #2c64fc 100%);
+    padding: 2px 8px;
+    border: 2px solid #fff;
+    border-radius: 50%;
+}
+
+nav .notification-section .avatar {
+    background-color: #D3D3D3;
+    border-radius: 50%;
+    height: 20px;
+    width: 20px;
+    margin-left: 10px;
+    cursor: pointer;
+}
+nav .notification-section .dropdown-btn {
+    border: none;
+    background-color: transparent;
+    font-size: 95%;
+    padding: 5px 10px;
+    cursor: pointer;
+    /* transform-origin: center; */
+    transition: all 0.2s ease-in-out;
+}
+nav .notification-section .dropdown-btn-active {
+    transform: rotate(180deg);
+}
+
+.dropdown {
+    position: absolute;
+    top: 80px;
+    height: auto;
+    width: 100px;
+    background-color: rgba(255, 255, 255);
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 3px 0px,
+    rgba(0, 0, 0, 0.06) 0px 1px 2px 0px;
+    display: none;
+    transition: all 0.2s ease-in-out;
+}
+.active-dropdown {
+    display: block;
+}
+
+.dropdown a {
+    font-size: 0.9rem;
+    color: #000;
+    padding: 10px 12px;
+    text-decoration: none;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 0.4rem;
+}
+
+/* Dropdown content */
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+}
+
+/* Dropdown content links */
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+/* Show the dropdown content when the button is clicked */
+.dropdown-container .dropdown-btn + .dropdown-content {
+    display: block;
+}
+.dropdown a:first-child {
+    border-bottom: 1px solid rgba(0, 0, 0, 0.229);
+}
+.dropdown a:last-child {
+    background: rgb(247, 247, 247);
+}
+

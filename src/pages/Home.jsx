@@ -453,7 +453,7 @@ function Home() {
                 <div className="nav-links" id="nav-links">
                     <a href="#">Home</a>
                     <a href="#">About</a>
-                    <a href="#">Products</a>
+                    <a href="/login">Products</a>
                     <a href="#">Contact Us</a>
                 </div>
                 <div className="nav-buttons">
