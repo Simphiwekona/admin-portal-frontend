@@ -13,6 +13,7 @@ import SignUp from './pages/Signup.jsx';
 import Message from './pages/Message.jsx';
 import Dashboard from "./pages/dashboard";
 import Users from "./components/users/Users";
+import EditUser from "./components/users/EditUser";
 
 
 const App = () => {
@@ -35,6 +36,8 @@ const App = () => {
             <Route path='/message' element={<Message />} />
             <Route path='/dashboard' element={<Dashboard />} />
             <Route path='/users' element={<Users />} />
+            <Route path='/editUser' element={<EditUser />} />
+
             
           </Routes>
         </div>
