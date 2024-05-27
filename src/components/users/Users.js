@@ -32,7 +32,7 @@ function Users() {
     }
 
     const handleDeleteConfirmed = (userId) => {
-        fetch(`http://localhost:8085/api/v1/user/${userId}`, {
+        fetch(`${process.env.REACT_APP_BASE_URL}/api/v1/user/${userId}`, {
             method: 'DELETE'
         })
             .then(response => {
@@ -66,7 +66,7 @@ function Users() {
     };
 
     const fetchData = () => {
-        return fetch("http://localhost:8085/api/v1/all")
+        return fetch(`${process.env.REACT_APP_BASE_URL}/api/v1/all`)
             .then(response => {
                 if (!response.ok) {
                     throw new Error('Network is down, Try again later');

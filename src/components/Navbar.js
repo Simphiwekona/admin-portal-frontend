@@ -19,9 +19,9 @@ function Navbar() {
             <nav className="navbar" id="navbar">
                 <div className="logo">Logo</div>
                 <div className="nav-links" id="nav-links">
-                    <a href="#">Home</a>
-                    <a href="#">Quotation</a>
-                    <a href="#">Products</a>
+                    <a href="/dashboard">Home</a>
+                    <a href="/quote">Quotation</a>
+                    <a href="/products">Products</a>
                     <a href="/users">Users</a>
                 </div>
                 <div className="nav-buttons">
