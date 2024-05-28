@@ -1,6 +1,7 @@
 import './App.css';
+
+import 'bootstrap/dist/css/bootstrap.min.css';
 import { BrowserRouter as Router, Route, Routes} from 'react-router-dom';
-import Quotes from './pages/Quotes.jsx';
 import Invoice from './pages/Invoice.jsx';
 import Product from './pages/Product.jsx';
 import AddItem from './pages/AddItems.jsx';
@@ -9,7 +10,11 @@ import Login from './pages/Login.jsx';
 import Analytics from './pages/Analytics.jsx';
 import SignUp from './pages/Signup.jsx';
 import Message from './pages/Message.jsx';
-
+import Dashboard from "./pages/dashboard";
+import Users from "./components/users/Users";
+import EditUser from "./components/users/EditUser";
+import QuotaList from "./components/quotation/QuoteList.js"
+import QuotationForm from "./components/quotation/QuotationForm";
 
 const App = () => {
 
@@ -21,7 +26,7 @@ const App = () => {
         <div>
           <Routes>
             <Route path="" element={<Home />} />
-            <Route path="/quote" element={<Quotes />} />
+            <Route path="/quote" element={<QuotaList />} />
             <Route path="/invoice" element={<Invoice />} />
             <Route path="/products" element={<Product />} />
             <Route path="/addItem/:quoteId" element={<AddItem quoteId={1}/>} />
@@ -29,7 +34,10 @@ const App = () => {
             <Route path='/analytics' element={<Analytics />} />
             <Route path='/signup' element={<SignUp />} />
             <Route path='/message' element={<Message />} />
-            
+            <Route path='/dashboard' element={<Dashboard />} />
+            <Route path='/users' element={<Users />} />
+            <Route path='/editUser' element={<EditUser />} />
+            <Route path='/quotationForm' element={<QuotationForm />} />
           </Routes>
         </div>
       </Router>

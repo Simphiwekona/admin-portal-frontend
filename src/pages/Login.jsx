@@ -1,9 +1,9 @@
 import { useState } from "react";
-import './styles/style.css';
-import './styles/login.css'
+// import './styles/style.css';
+// import './styles/login.css'
 import LinkedLogo from './../assest/LinkedLogo.png';
 import { Link, useNavigate } from "react-router-dom";
-import NotificationAlert from "../components/services/NotificationAlert";
+// import NotificationAlert from "../components/services/NotificationAlert";
 
 
 const Login = () => {

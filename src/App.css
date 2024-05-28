@@ -1,4 +1,9 @@
-
+.container {
+    position: relative;
+    width: 80%;
+    margin: auto;
+    top: 70px;
+}
 .side-nav {
     height: 100%;
     width: 160px;
@@ -23,8 +28,73 @@
   .side-nav a:hover {
     color: goldenrod;
   }
-  
-  @media screen and (max-width: 600px) {
+  .primary-btn {
+      position: absolute;
+      right: 20px;
+      background-color: navy;
+      color: #FFF;
+      border: none;
+      padding: 10px;
+      border-radius: 10px;
+      cursor: pointer;
+
+  }
+  .description-section{
+      position: relative;
+      top: 40px;
+  }
+
+.table {
+    position: absolute;
+    top: 80px;
+    margin: 50px 0;
+    border-collapse: separate;
+    border-spacing: 0;
+}
+.title h2{
+    color: #333;
+    font-size: 36px;
+    font-weight: bolder;
+}
+.table thead th {
+    background-color: #f8f9fa;
+    color: #343a40;
+    border-bottom: 2px solid #dee2e6;
+}
+
+.table tbody tr:nth-of-type(odd) {
+    background-color: #f9f9f9;
+}
+
+.table tbody tr:hover {
+    background-color: #f1f1f1;
+}
+
+.table th, .table td {
+    padding: 12px;
+    text-align: left;
+    vertical-align: middle;
+    border-top: 1px solid #dee2e6;
+}
+
+.table th {
+    font-weight: bold;
+}
+/* TableStyles.css */
+
+.summary-section {
+    margin-top: 30%;
+    padding: 10px;
+    border: 1px solid #dee2e6;
+    background-color: #f8f9fa;
+    border-radius: 5px;
+}
+
+.summary-section p {
+    margin: 5px 0;
+}
+
+@media screen and (max-width: 600px) {
     .side-nav {
       width: 0;
     }

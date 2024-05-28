@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { Button, Form, InputGroup, Modal } from 'react-bootstrap';
 import { useNavigate, useNavigater } from 'react-router-dom';
+import ErrorPopup from '../popups/ErrorPopup';
 
 const QuoteModel = () => {
 
@@ -13,6 +14,7 @@ const QuoteModel = () => {
     })
 
     const navigate = useNavigate();
+    const [error, setError] = useState(null);
 
     const handleShow = () => setShow(true);
     const handleClose = () => setShow(false);
@@ -26,7 +28,7 @@ const QuoteModel = () => {
         if (quote.checkValidity() === false) {
             e.stopPropagation();
         } else {
-            fetch("http://localhost:8080/api/quotations/create", {
+            fetch("http://localhost:8080/api/v1/quote/create", {
                 method: 'POST',
                 headers: {
                     'Content-type': 'application/json',
@@ -38,7 +40,7 @@ const QuoteModel = () => {
                     // alert('Successful Created Quote');
                     // alert(data.quoteId);
                     // console.log('success', data);
-                    navigate(`/addItem/${data.quoteId}`)
+                    // navigate(`/addItem/${data.quoteId}`)
                     handleClose();
                     setValid(true)
                 })
@@ -88,6 +90,10 @@ const QuoteModel = () => {
                     <Button variant='success' onClick={handleSubmit}>Add Quote</Button>
                 </Modal.Footer>
             </Modal>
+
+
+            <ErrorPopup show={!!error} handleClose={handleClose} errorMessage={error} />
+            
         </>
     )
 
